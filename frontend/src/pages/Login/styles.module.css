@@ -1,0 +1,131 @@
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .pagina { padding: 1.5rem; }
+}
+
+.card {
+  width: 100%;
+  max-width: 24rem;
+}
+
+@media (min-width: 640px) {
+  .card { max-width: 28rem; }
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .cabecalho { margin-bottom: 2rem; }
+}
+
+.iconeContainer {
+  width: 3rem;
+  height: 3rem;
+  background: var(--cor-primaria-fundo);
+  color: var(--cor-primaria);
+  border-radius: var(--raio-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .iconeContainer {
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--raio-2xl);
+    margin-bottom: 1rem;
+  }
+}
+
+.titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+}
+
+@media (min-width: 640px) {
+  .titulo { font-size: 1.5rem; }
+}
+
+.subtitulo {
+  font-size: 0.875rem;
+  color: var(--cor-cinza-500);
+}
+
+@media (min-width: 640px) {
+  .subtitulo { font-size: 1rem; }
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grupo { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-cinza-700);
+  margin-bottom: 0.25rem;
+}
+
+.inputWrapper { position: relative; }
+
+.inputIcone {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cor-cinza-400);
+  pointer-events: none;
+}
+
+.inputComIcone {
+  padding-left: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .inputComIcone { padding-left: 2.5rem; }
+}
+
+.erroContainer {
+  background: var(--cor-erro-fundo);
+  color: var(--cor-erro);
+  padding: 0.75rem;
+  border-radius: var(--raio-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--cor-erro-fundo);
+}
+
+.btnEntrar {
+  width: 100%;
+  padding: 0.625rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .btnEntrar {
+    padding: 0.75rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+}

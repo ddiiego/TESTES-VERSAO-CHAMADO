@@ -1,0 +1,185 @@
+.pagina { }
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .cabecalho {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.icone {
+  background: var(--cor-primaria-fundo);
+  padding: 0.5rem;
+  border-radius: var(--raio-lg);
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .icone { padding: 0.75rem; border-radius: var(--raio-xl); }
+}
+
+.titulo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+}
+
+@media (min-width: 640px) {
+  .titulo { font-size: 1.5rem; }
+}
+
+.subtitulo { font-size: 0.75rem; color: var(--cor-cinza-500); }
+
+@media (min-width: 640px) {
+  .subtitulo { font-size: 0.875rem; }
+}
+
+.periodoDestaque { margin-left: 0.5rem; color: var(--cor-primaria); }
+
+/* ── Motivação ── */
+
+.motivacao {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .motivacao { margin-bottom: 1.5rem; }
+}
+
+.motivacaoEmoji { font-size: 1.875rem; }
+
+.motivacaoTexto { font-size: 1.125rem; font-weight: 700; color: var(--cor-cinza-900); }
+.motivacaoNome { font-size: 0.875rem; color: var(--cor-cinza-500); }
+
+/* ── Grid de Médias ── */
+
+.gridMedias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gridMedias {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cardMedia {
+  padding: 1rem;
+  border-radius: var(--raio-xl);
+  border: 1px solid transparent;
+}
+
+@media (min-width: 640px) {
+  .cardMedia { padding: 1.5rem; }
+}
+
+/* Variantes de card por desempenho */
+.cardExcelente { background: #ecfdf5; border-color: #d1fae5; }
+.cardBom { background: #eff6ff; border-color: #dbeafe; }
+.cardRegular { background: #fffbeb; border-color: #fef3c7; }
+.cardBaixo { background: #fff1f2; border-color: #ffe4e6; }
+.cardSemDados { background: var(--cor-cinza-50); border-color: var(--cor-cinza-100); }
+
+.cardMediaCabecalho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardMediaLabel {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-500);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cardMediaValor {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+@media (min-width: 640px) {
+  .cardMediaValor { font-size: 1.875rem; }
+}
+
+/* ── Estrelas ── */
+
+.estrelas { display: flex; align-items: center; gap: 2px; margin-top: 0.25rem; }
+.estrelaAtiva { color: var(--cor-amarelo-fill); fill: var(--cor-amarelo-fill); }
+.estrelaVazia { color: var(--cor-cinza-200); }
+
+/* ── Cores de Média ── */
+
+.mediaExcelente { color: var(--cor-sucesso); }
+.mediaBom { color: var(--cor-azul); }
+.mediaRegular { color: var(--cor-aviso); }
+.mediaBaixo { color: var(--cor-rose); }
+.mediaSemDados { color: var(--cor-cinza-400); }
+
+/* ── Resumo ── */
+
+.resumoTitulo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-cinza-700);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gridResumo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.resumoCard {
+  background: var(--cor-cinza-50);
+  border-radius: var(--raio-lg);
+  padding: 1rem;
+}
+
+.resumoLabel {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-400);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.resumoValor {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--cor-cinza-900);
+}
+
+.resumoValorDestaque {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--cor-primaria);
+}
+
+/* ── Estados ── */
+
+.carregando, .vazio {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--cor-cinza-500);
+}

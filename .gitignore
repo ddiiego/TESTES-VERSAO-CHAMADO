@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build
+frontend/dist/
+backend/target/
+
+# Arquivos de ambiente (NUNCA commitar)
+.env
+.env.local
+.env.production
+.env.example
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Vercel
+.vercel/

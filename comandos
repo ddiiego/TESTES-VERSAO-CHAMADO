@@ -1,0 +1,52 @@
+---> .\mvnw.cmd spring-boot:run  
+Oy8OpgLqJqHDVXRN
+
+
+
+-------------
+✅ Alterações feitas:
+Arquivo	Alteração
+.env	Limpo (vazio)
+.env.example	Criado com placeholders e exemplos
+frontend/.env.example	Criado
+backend/server.js	Removido fallback hardcoded
+api/index.js	Removido fallback JWT
+docker-compose.yml	Usa variáveis de ambiente
+backend_legacy/	Deletado
+.gitignore	Atualizado
+---
+📋 O que você precisa configurar (novo ambiente)
+1. SUPABASE (Banco de Dados)
+SUPABASE_URL=https://xxxxx.supabase.co
+SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+Onde criar: https://supabase.com/dashboard > New Project
+---
+2. JWT_SECRET (Autenticação)
+JWT_SECRET=uma_chave_aleatoria_de_32_caracteres
+Como gerar:
+# No terminal:
+openssl rand -base64 32
+Ou use um gerador online como https://randomkeygen.com
+---
+3. TELEGRAM (Notificações)
+Bot Token:
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+Onde criar:
+1. Abra o Telegram
+2. Procure por @BotFather
+3. Envie /newbot
+4. Siga as instruções
+Chat ID (ID do grupo):
+TELEGRAM_CHAT_ID=-1001234567890
+Como descobrir:
+1. Adicione @userinfobot ao seu grupo
+2. Ele mostrará o Chat ID
+---
+4. PORT (opcional)
+PORT=8080
+Padrão já é 8080, pode deixar vazio.
+---
+📁 Arquivos finais
+.env (preencha com seus novos valores)
+.env.example (referência, não commita valores reais)
+frontend/.env.example (referência)

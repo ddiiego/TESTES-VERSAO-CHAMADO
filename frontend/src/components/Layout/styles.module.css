@@ -1,0 +1,563 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--cor-cinza-100);
+}
+
+/* ── Sidebar (desktop) ── */
+
+.sidebar {
+  display: none;
+  flex-direction: column;
+  width: 14rem;
+  background: white;
+  border-right: 1px solid var(--cor-cinza-200);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 30;
+}
+
+@media (min-width: 640px) {
+  .sidebar { display: flex; }
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--cor-cinza-100);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background var(--transicao);
+}
+
+.sidebarLogo:hover { background: var(--cor-cinza-50); }
+
+.sidebarLogoIcone { color: var(--cor-primaria); flex-shrink: 0; }
+
+.sidebarLogoTexto {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-cinza-800);
+  line-height: 1.3;
+  text-align: left;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 0.5rem 0;
+  overflow-y: auto;
+}
+
+.navItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transicao);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-cinza-600);
+}
+
+.navItem:hover {
+  background: var(--cor-cinza-50);
+  color: var(--cor-cinza-900);
+}
+
+.navItemAtivo {
+  background: var(--cor-primaria-clara);
+  color: var(--cor-primaria);
+  border-right: 2px solid var(--cor-primaria);
+}
+
+/* ── Rodapé sidebar ── */
+
+.sidebarRodape {
+  border-top: 1px solid var(--cor-cinza-200);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.usuarioCard {
+  background: var(--cor-primaria-clara);
+  border-radius: var(--raio-xl);
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.usuarioCardTopo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.usuarioAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--cor-primaria);
+  border-radius: var(--raio-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--sombra-sm);
+}
+
+.usuarioDados {
+  min-width: 0;
+  flex: 1;
+}
+
+.usuarioNome {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.usuarioSetor {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-500);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0.125rem;
+}
+
+.usuarioBadgeRole {
+  margin-top: 0.625rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: var(--cor-primaria);
+  border-radius: var(--raio-lg);
+  padding: 0.25rem 0.625rem;
+}
+
+.usuarioBadgeRoleTexto {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+}
+
+.btnRodape {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: var(--raio-lg);
+  transition: all var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-cinza-600);
+}
+
+.btnRodape:hover { background: var(--cor-cinza-100); }
+
+.btnSair { color: #ef4444; }
+.btnSair:hover { background: var(--cor-erro-fundo); }
+
+/* ── Lado Direito ── */
+
+.conteudoDireito {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .conteudoDireito { margin-left: 14rem; }
+}
+
+/* ── Header ── */
+
+.header {
+  background: white;
+  box-shadow: var(--sombra-sm);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.headerInner {
+  padding: 0.75rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .headerInner { padding: 0.75rem 1rem; }
+}
+
+.headerLogoMobile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .headerLogoMobile { display: none; }
+}
+
+.headerLogoTexto {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cor-cinza-800);
+}
+
+.headerSpacer {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .headerSpacer { display: block; }
+}
+
+.headerAcoes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .headerAcoes { gap: 0.75rem; }
+}
+
+.btnHeader {
+  padding: 0.5rem;
+  color: var(--cor-cinza-500);
+  border-radius: var(--raio-full);
+  transition: all var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.btnHeader:hover { background: var(--cor-cinza-100); }
+
+.badgeNotif {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--cor-erro);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  border-radius: var(--raio-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  animation: bounce 1s infinite;
+}
+
+/* ── Painel de Notificações ── */
+
+.painelNotif {
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  width: 20rem;
+  background: white;
+  border-radius: var(--raio-xl);
+  box-shadow: var(--sombra-xl);
+  border: 1px solid var(--cor-cinza-100);
+  overflow: hidden;
+  z-index: 50;
+}
+
+.painelNotifHeader {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--cor-cinza-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cor-cinza-50);
+}
+
+.painelNotifTitulo {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--cor-cinza-500);
+  letter-spacing: 0.1em;
+}
+
+.btnLimparTudo {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transicao);
+}
+
+.btnLimparTudo:hover { color: var(--cor-primaria-hover); }
+
+.painelNotifLista {
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.notifVazia {
+  padding: 2rem;
+  text-align: center;
+  color: var(--cor-cinza-400);
+}
+
+.notifVaziaIcone {
+  margin: 0 auto 0.5rem;
+  opacity: 0.2;
+}
+
+.notifVaziaTexto {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.notifItem {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--cor-cinza-50);
+  transition: background var(--transicao);
+  cursor: pointer;
+}
+
+.notifItem:hover { background: var(--cor-primaria-clara); }
+
+.notifItemTopo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.125rem;
+}
+
+.notifItemTitulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  transition: color var(--transicao);
+}
+
+.notifItem:hover .notifItemTitulo { color: var(--cor-primaria); }
+
+.notifItemHora {
+  font-size: 0.5625rem;
+  color: var(--cor-cinza-400);
+  font-weight: 500;
+}
+
+.notifItemMensagem {
+  font-size: 0.6875rem;
+  color: var(--cor-cinza-600);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* ── Menu Mobile ── */
+
+.menuMobileWrapper {
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .menuMobileWrapper { display: none; }
+}
+
+.menuMobileDropdown {
+  position: absolute;
+  right: 0;
+  top: 3rem;
+  background: white;
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-lg);
+  border: 1px solid var(--cor-cinza-200);
+  padding: 0.5rem 0;
+  min-width: 12.5rem;
+}
+
+.menuMobileUsuario {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--cor-cinza-100);
+}
+
+.menuMobileNome {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuMobileSetor {
+  font-size: 0.75rem;
+  color: var(--cor-cinza-500);
+}
+
+.menuMobileRole {
+  font-size: 0.75rem;
+  color: var(--cor-azul);
+  font-weight: 500;
+}
+
+.menuMobileItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: background var(--transicao);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-cinza-700);
+}
+
+.menuMobileItem:hover { background: var(--cor-cinza-50); }
+
+.menuMobileItemAtivo { background: var(--cor-primaria-clara); color: var(--cor-primaria); }
+
+.menuMobileDivisor {
+  border-top: 1px solid var(--cor-cinza-100);
+  margin-top: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.menuMobileSair { color: #dc2626; }
+.menuMobileSair:hover { background: var(--cor-erro-fundo); }
+
+/* ── Conteúdo Principal ── */
+
+.main {
+  padding: 1rem 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .main { padding: 1.5rem; }
+}
+
+/* ── Modal de Senha ── */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+.modalSenha {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.modalSenhaCabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.modalSenhaTitulo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modalSenhaIconeContainer {
+  background: var(--cor-primaria-fundo);
+  padding: 0.625rem;
+  border-radius: var(--raio-xl);
+}
+
+.modalSenhaTituloTexto {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+}
+
+.btnFecharModal {
+  color: var(--cor-cinza-400);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transicao);
+}
+
+.btnFecharModal:hover { color: var(--cor-cinza-600); }
+
+.modalSenhaFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.campoGrupo { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.campoLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-cinza-700);
+}
+
+.campoSenha {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--cor-cinza-200);
+  border-radius: var(--raio-xl);
+  outline: none;
+  transition: all var(--transicao);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.campoSenha:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 2px rgb(79 70 229 / 0.2);
+}
+
+.mensagemErro  { font-size: 0.875rem; color: var(--cor-erro); font-weight: 500; }
+.mensagemSucesso { font-size: 0.875rem; color: var(--cor-sucesso); font-weight: 500; }

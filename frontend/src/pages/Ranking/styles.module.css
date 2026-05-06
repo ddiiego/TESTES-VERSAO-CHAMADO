@@ -1,0 +1,194 @@
+.pagina { }
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .cabecalho {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.tituloArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .tituloArea { gap: 0.75rem; }
+}
+
+.icone {
+  background: #fef9c3;
+  padding: 0.5rem;
+  border-radius: var(--raio-lg);
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .icone { padding: 0.75rem; border-radius: var(--raio-xl); }
+}
+
+.titulo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--cor-cinza-900);
+}
+
+@media (min-width: 640px) {
+  .titulo { font-size: 1.5rem; }
+}
+
+.subtitulo { font-size: 0.75rem; color: var(--cor-cinza-500); }
+
+@media (min-width: 640px) {
+  .subtitulo { font-size: 0.875rem; }
+}
+
+.periodoDestaque { margin-left: 0.5rem; color: var(--cor-primaria); }
+
+.acoes { display: flex; gap: 0.5rem; }
+
+.btnLimpar { color: var(--cor-erro) !important; border-color: var(--cor-erro-fundo) !important; }
+.btnLimpar:hover { background: var(--cor-erro-fundo) !important; }
+
+/* ── Estados ── */
+
+.carregando, .vazio {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--cor-cinza-500);
+}
+
+@media (min-width: 640px) {
+  .carregando, .vazio { padding: 3rem 0; }
+}
+
+.vazioIcone { display: block; margin: 0 auto 0.5rem; }
+
+/* ── Tabela Desktop ── */
+
+.tabelaContainer { overflow-x: auto; }
+
+.tabela { width: 100%; text-align: left; }
+
+.tabelaTh {
+  padding-bottom: 1rem;
+  font-weight: 600;
+  color: var(--cor-cinza-700);
+  border-bottom: 1px solid var(--cor-cinza-100);
+}
+
+.tabelaThCentro { text-align: center; }
+
+.tabelaTr { border-bottom: 1px solid var(--cor-cinza-50); }
+.tabelaTr:hover { background: rgb(249 250 251 / 0.5); }
+.tabelaTrTop3 { background: rgb(254 252 232 / 0.3); }
+
+.tabelaTd { padding: 1rem 0; }
+.tabelaTdCentro { padding: 1rem 0; text-align: center; }
+
+.posicaoNumero {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-cinza-400);
+  width: 1.25rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.tecnicoInfo { display: flex; align-items: center; gap: 0.75rem; }
+
+.tecnicoAvatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--cor-primaria-fundo);
+  border-radius: var(--raio-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  flex-shrink: 0;
+}
+
+.tecnicoNome { font-weight: 500; color: var(--cor-cinza-900); display: block; }
+.tecnicoUsername { font-size: 0.75rem; color: var(--cor-cinza-400); }
+
+.mediaCelula { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.mediaValor { font-size: 0.875rem; font-weight: 700; }
+
+.chamadosTotal { font-size: 0.875rem; color: var(--cor-cinza-600); }
+.chamadosMes { font-size: 0.75rem; color: var(--cor-cinza-400); display: block; }
+
+/* ── Cores de Média ── */
+
+.mediaExcelente { color: var(--cor-sucesso); }
+.mediaBom { color: var(--cor-azul); }
+.mediaRegular { color: var(--cor-aviso); }
+.mediaBaixo { color: var(--cor-rose); }
+.mediaSemDados { color: var(--cor-cinza-400); }
+
+/* ── Estrelas ── */
+
+.estrelas { display: flex; align-items: center; gap: 2px; }
+.estrelaAtiva { color: var(--cor-amarelo-fill); fill: var(--cor-amarelo-fill); }
+.estrelaVazia { color: var(--cor-cinza-200); }
+
+/* ── Cards Mobile ── */
+
+.cardsDesktop { display: none; }
+@media (min-width: 640px) { .cardsDesktop { display: block; } }
+
+.cardsMobile { display: flex; flex-direction: column; gap: 0.75rem; }
+@media (min-width: 640px) { .cardsMobile { display: none; } }
+
+.cardMobile {
+  border: 1px solid var(--cor-cinza-100);
+  border-radius: var(--raio-lg);
+  padding: 1rem;
+}
+
+.cardMobileTop3 {
+  border-color: #fde68a;
+  background: rgb(254 252 232 / 0.3);
+}
+
+.cardMobileTopo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.cardMobileInfo { display: flex; align-items: center; gap: 0.75rem; }
+
+.cardMobileAvatarGrupo { display: flex; align-items: center; gap: 0.5rem; }
+
+.cardMobileNome { font-weight: 500; color: var(--cor-cinza-900); display: block; font-size: 0.875rem; }
+.cardMobileChamados { font-size: 0.75rem; color: var(--cor-cinza-400); }
+
+.gridMedias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.gridMediaLabel {
+  font-size: 0.625rem;
+  color: var(--cor-cinza-400);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.gridMediaValor { font-size: 0.875rem; font-weight: 700; }

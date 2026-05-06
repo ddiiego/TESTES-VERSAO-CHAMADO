@@ -1,0 +1,129 @@
+.container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 20rem;
+  pointer-events: none;
+}
+
+.fecharTodosContainer {
+  pointer-events: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fecharTodosBtn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-cinza-500);
+  background: white;
+  border: 1px solid var(--cor-cinza-200);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--raio-full);
+  box-shadow: var(--sombra-sm);
+  cursor: pointer;
+  transition: all var(--transicao);
+}
+
+.fecharTodosBtn:hover {
+  color: var(--cor-erro);
+  border-color: var(--cor-erro-fundo);
+}
+
+/* ── ToastCard ── */
+
+.card {
+  pointer-events: auto;
+  width: 100%;
+  background: white;
+  border-radius: var(--raio-xl);
+  box-shadow: var(--sombra-lg);
+  border: 1px solid var(--cor-cinza-100);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.card[data-type="info"]    { border-left-color: var(--cor-primaria); }
+.card[data-type="success"] { border-left-color: var(--cor-sucesso); }
+.card[data-type="error"]   { border-left-color: var(--cor-erro); }
+.card[data-type="warning"] { border-left-color: var(--cor-aviso); }
+
+.cardEntrar { opacity: 1; transform: translateX(0); }
+.cardSaindo { opacity: 0; transform: translateX(2.5rem); }
+
+.cardClicavel { cursor: pointer; }
+
+.cardCorpo {
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: var(--raio-xl);
+}
+
+.cardCorpo[data-type="info"]    { background-color: #eef2ff; }
+.cardCorpo[data-type="success"] { background-color: #ecfdf5; }
+.cardCorpo[data-type="error"]   { background-color: #fef2f2; }
+.cardCorpo[data-type="warning"] { background-color: #fffbeb; }
+
+.cardCorpoClicavel:hover { filter: brightness(0.97); transition: filter var(--transicao); }
+
+.icone {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.icone[data-type="info"]    { color: var(--cor-primaria); }
+.icone[data-type="success"] { color: var(--cor-sucesso); }
+.icone[data-type="error"]   { color: var(--cor-erro); }
+.icone[data-type="warning"] { color: var(--cor-aviso); }
+
+.conteudo {
+  flex: 1;
+  min-width: 0;
+}
+
+.titulo {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.125rem;
+}
+
+.titulo[data-type="info"]    { color: #1e1b4b; }
+.titulo[data-type="success"] { color: #064e3b; }
+.titulo[data-type="error"]   { color: #7f1d1d; }
+.titulo[data-type="warning"] { color: #78350f; }
+
+.mensagem {
+  font-size: 0.875rem;
+  color: var(--cor-cinza-600);
+  line-height: 1.4;
+}
+
+.dica {
+  font-size: 0.6875rem;
+  color: var(--cor-cinza-400);
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.fechar {
+  color: var(--cor-cinza-400);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transicao);
+}
+
+.fechar:hover {
+  color: var(--cor-cinza-600);
+}

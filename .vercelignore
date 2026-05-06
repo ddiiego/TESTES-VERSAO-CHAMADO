@@ -1,0 +1,8 @@
+# Ignorar do deploy na Vercel
+backend_legacy/
+*.bat
+*.ps1
+docker-compose.yml
+comandos
+README.md
+.git/

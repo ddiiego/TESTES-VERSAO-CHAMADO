@@ -1,0 +1,107 @@
+:root {
+  /* Primária (Índigo) */
+  --cor-primaria: #4f46e5;
+  --cor-primaria-hover: #4338ca;
+  --cor-primaria-fundo: #e0e7ff;
+  --cor-primaria-clara: #eef2ff;
+  --cor-primaria-texto: #3730a3;
+
+  /* Sucesso (Esmeralda) */
+  --cor-sucesso: #059669;
+  --cor-sucesso-hover: #047857;
+  --cor-sucesso-fundo: #d1fae5;
+  --cor-sucesso-clara: #ecfdf5;
+  --cor-sucesso-texto: #065f46;
+
+  /* Verde */
+  --cor-verde: #16a34a;
+  --cor-verde-fundo: #dcfce7;
+  --cor-verde-texto: #15803d;
+
+  /* Aviso (Âmbar) */
+  --cor-aviso: #d97706;
+  --cor-aviso-hover: #b45309;
+  --cor-aviso-fundo: #fef3c7;
+  --cor-aviso-clara: #fffbeb;
+  --cor-aviso-texto: #92400e;
+
+  /* Erro (Vermelho) */
+  --cor-erro: #dc2626;
+  --cor-erro-hover: #b91c1c;
+  --cor-erro-fundo: #fee2e2;
+  --cor-erro-clara: #fef2f2;
+  --cor-erro-texto: #991b1b;
+
+  /* Rosa */
+  --cor-rose: #e11d48;
+  --cor-rose-fundo: #ffe4e6;
+  --cor-rose-clara: #fff1f2;
+  --cor-rose-texto: #9f1239;
+
+  /* Azul */
+  --cor-azul: #2563eb;
+  --cor-azul-hover: #1d4ed8;
+  --cor-azul-fundo: #dbeafe;
+  --cor-azul-clara: #eff6ff;
+  --cor-azul-texto: #1e40af;
+
+  /* Roxo */
+  --cor-roxo: #9333ea;
+  --cor-roxo-fundo: #f3e8ff;
+  --cor-roxo-texto: #6b21a8;
+
+  /* Laranja */
+  --cor-laranja: #ea580c;
+  --cor-laranja-hover: #c2410c;
+  --cor-laranja-fundo: #ffedd5;
+  --cor-laranja-texto: #9a3412;
+
+  /* Amarelo (estrelas) */
+  --cor-amarelo: #eab308;
+  --cor-amarelo-fill: #facc15;
+
+  /* Cinza */
+  --cor-cinza-50: #f9fafb;
+  --cor-cinza-100: #f3f4f6;
+  --cor-cinza-200: #e5e7eb;
+  --cor-cinza-300: #d1d5db;
+  --cor-cinza-400: #9ca3af;
+  --cor-cinza-500: #6b7280;
+  --cor-cinza-600: #4b5563;
+  --cor-cinza-700: #374151;
+  --cor-cinza-800: #1f2937;
+  --cor-cinza-900: #111827;
+
+  /* Semânticas */
+  --cor-texto: var(--cor-cinza-900);
+  --cor-texto-secundario: var(--cor-cinza-500);
+  --cor-texto-fraco: var(--cor-cinza-400);
+  --cor-fundo: var(--cor-cinza-50);
+  --cor-fundo-card: #ffffff;
+  --cor-borda: var(--cor-cinza-200);
+  --cor-borda-clara: var(--cor-cinza-100);
+
+  /* Raios */
+  --raio-sm: 0.375rem;
+  --raio-md: 0.5rem;
+  --raio-lg: 0.5rem;
+  --raio-xl: 0.75rem;
+  --raio-2xl: 1rem;
+  --raio-full: 9999px;
+
+  /* Sombras */
+  --sombra-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --sombra: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --sombra-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --sombra-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --sombra-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --sombra-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+  /* Chat */
+  --cor-chat-bg: #e4e9f2;
+  --cor-chat-minha: #effdde;
+  --cor-chat-outro: #ffffff;
+
+  /* Transição padrão */
+  --transicao: 150ms ease;
+}
